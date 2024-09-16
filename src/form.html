@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Kamar</title>
+    <link rel="stylesheet" href="../style/output.css">
+</head>
+<body class="bg-slate-400">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="../img/png-transparent-hotel-motel-gratis-hotel-text-presentation-logo-thumbnail.png" class="h-8" alt="Hotel Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Hotel</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="home.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+              </li>
+              <li>
+                <a href="form.html" class="  block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Room Order</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+
+    <div class="p-52 pt-20">
+        <form class="max-w-sm mx-auto">
+            <div class="mb-5">
+                <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pemesan</label>
+                <input type="text" id="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Luthfi Aditya" required />
+            </div>
+            <fieldset>
+                <legend class="sr-only">Jenis Kelamin</legend>
+                <label for="">Jenis Kelamin</label> <br>
+                <div class="flex items-center mb-4">
+                    <input id="gender-option-1" type="radio" name="gender" value="Laki-Laki" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked>
+                    <label for="gender-option-1" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Laki-Laki
+                    </label>
+                </div>
+            
+                <div class="flex items-center mb-4">
+                    <input id="gender-option-2" type="radio" name="gender" value="Perempuan" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="gender-option-2" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Perempuan
+                    </label>
+                </div>
+            </fieldset> 
+            <div class="mb-5">
+                <label for="idnumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomor Identitas</label>
+                <input type="text" id="idnumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="36XXXXXXXXXXXXXX" required />
+            </div>
+            <label for="roomtype" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipe Kamar</label>
+            <select id="roomtype" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Family">Family</option>
+            </select>
+            <br>
+
+            <div class="mb-5">
+                <label for="harga" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
+                <input type="text" id="harga" value="Rp 500.000,00" readonly class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <div class="mb-5">
+                <label for="tanggalPesan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Pemesanan</label>
+                <input type="date" id="tanggalPesan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <div class="mb-5">
+                <label for="durasiMenginap" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Durasi Menginap</label>
+                <input type="number" id="durasiMenginap" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+            </div>
+            <div class="mb-5">
+                <label for="totalBayar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga Total</label>
+                <input type="text" id="totalBayar" name="totalBayar" readonly class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total bayar akan muncul di sini" required />
+                </div>
+    
+                <div class="flex items-center mb-4">
+                    <input checked id="termasukBreakfast" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="termasukBreakfast" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Termasuk <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">Sarapan</a>.</label>
+                </div>
+    
+                <div class="flex items-start mb-5">
+                    <button type="button" onclick="hitungTotalBayar()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Hitung Total</button>
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                </div>
+        </form>
+    </div>
+    
+    <script>
+        function updateHarga() {
+            // Mendapatkan tipe kamar yang dipilih
+            const tipeKamar = document.getElementById("roomtype").value;
+            let hargaKamar;
+
+            // Menentukan harga berdasarkan tipe kamar
+            if (tipeKamar === "Standard") {
+                hargaKamar = 500000;
+            } else if (tipeKamar === "Deluxe") {
+                hargaKamar = 550000;
+            } else if (tipeKamar === "Family") {
+                hargaKamar = 600000;
+            }
+
+            // Memperbarui nilai input harga
+            document.getElementById("harga").value = hargaKamar.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+        }
+
+        function hitungTotalBayar() {
+            // Memanggil updateHarga untuk memperbarui harga sebelum menghitung total
+            updateHarga();
+
+            // Mendapatkan harga kamar setelah diperbarui
+            const hargaKamar = parseInt(document.getElementById("harga").value.replace(/[^\d]/g, ''));
+            const durasiMenginap = parseInt(document.getElementById("durasiMenginap").value);
+            const termasukSarapan = document.getElementById("termasukBreakfast").checked;
+
+            // Menghitung biaya tambahan untuk sarapan
+            const biayaSarapan = termasukSarapan ? 50000 * durasiMenginap : 0;
+
+            // Menghitung total bayar
+            const totalBayar = (hargaKamar * durasiMenginap) + biayaSarapan;
+
+            // Memperbarui nilai input totalBayar
+            document.getElementById("totalBayar").value = totalBayar.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+        }
+
+        // Menambahkan event listener pada dropdown roomtype untuk memanggil updateHarga setiap kali pilihan berubah
+        document.getElementById("roomtype").addEventListener("change", updateHarga);
+    </script>
+</body>
+</html>
